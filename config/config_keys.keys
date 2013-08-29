@@ -1,0 +1,8 @@
+module.exports = {
+
+"development": {
+  "AWS_ID":"AKIAIANJ4E5XFAUZ5XLQ"
+ ,"AWS_SECRET": "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"
+}
+
+}

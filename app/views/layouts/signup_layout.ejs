@@ -1,0 +1,220 @@
+<!DOCTYPE html>   
+<html lang="en">   
+<head>   
+<meta charset="utf-8">   
+<title><%= title %></title>   
+<meta name="description" content="Bla bla bla">  
+
+
+<link href="../twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+
+<script src="../twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+<script src="../twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script> 
+
+
+<style type="text/css">
+    img.bg {
+    /* Set rules to fill background */
+    min-height: 768px;
+    min-width: 1024px;
+    max-width: 60%;
+    max-height: 100%;
+  
+  /* Set up proportionate scaling */
+  height:auto;
+  top:-2%;
+  left:14%;
+    
+  /* Set up positioning */
+  position: absolute;
+  z-index: 0;
+
+
+}
+body{
+ /* background-color:#D04040; */
+}
+img.logo{
+   /*min-height: 150px;*/
+   margin-top: 70px;
+   margin-left: 60px; 
+}
+
+#sign-up{
+   margin-top: 200px;
+}
+
+#dropdown-sign-in{
+  /*color:#ee2e24;*/
+  /*color:#7DBE32; *//*htc neon green*/
+  color:#99CC33;
+  padding-top: 50px;
+  margin-left: 180px;
+  clear: both;
+  background:#FFFFFF;
+  font: 'Helvetica Neue',Helvetica,Arial;
+  font-weight:bold;
+}
+
+/*#quote {
+
+  margin-left: 60px;
+  font: 'Helvetica Neue',Helvetica,Arial;
+  font-weight:bold;
+} */
+
+#quote {
+margin-left: 60px;
+font-family: 'Titillium Web',sans-serif;
+font-size: 18px;
+font-weight:bold;
+}
+
+</style>
+
+</head>  
+
+<body>
+  
+
+<a name="top"></a>
+<table width="100%" height="12" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#000000" float: "top">
+  <tbody><tr>
+    <td align="left" valign="top"></td>
+  </tr>
+</tbody></table>    
+<div class="container-fluid">
+  
+  <div class="span6 offset2">
+    <h1 ><img src="/images/my-hack.png" class="logo" align="center" style="padding-right:-15px; border-right: 1px solid #ccc;"/></h1>
+     <div id="quote"><div class="span10"> <p><i> The world is a giant puzzle that hasn't been put together yet...</i></p> </div> </div>
+  </div>
+
+      <div class="span8 offset1">  
+      <ul class="nav pull-right">  
+  <li class="dropdown">  
+    <a href="#"  
+          class="dropdown-toggle"  
+          data-toggle="dropdown" id="dropdown-sign-in">  
+          Sign In ?
+          <b class="caret"></b>  
+    </a>  
+    <ul class="dropdown-menu" >  
+    <form style="margin: 0px" accept-charset="UTF-8" action="/login" method="get">
+      <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/>
+        <input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" />
+      </div>
+      <fieldset class='textbox' style="padding:10px">
+        <input style="margin-top: 8px" type="email" name="username"placeholder="Email" class="required" />
+        <input style="margin-top: 8px" type="password" name="password" placeholder="Password" />
+        <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+        <label class="string optional" for="user_remember_me"> Remember me</label>
+        <div style="text-align: right">
+         <input name="login" type="submit" value="Log In" id="log-in-button"/> 
+        </div>                  
+      </fieldset>
+    </form>
+
+    </ul>    
+  </li>  
+</ul>  
+         <div id="sign-up" >
+            <form style="margin: 0px" accept-charset="UTF-8" action="/signup" method="post" id="signup">
+
+      <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/>
+        <input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" />
+      </div>
+                  <fieldset class='textbox' style="padding:2px"> 
+                  <div class="alert alert-error">
+                        <button type="button" class="close" data-dismiss="alert" style=background:"background:#FFFFFF;"><a href="/">×</a></button>
+                        <strong>Umm.. Looks like you had already signed up!&emsp;&emsp;</strong> <a href="/signup">Forgot password?</a>
+                  </div>  </fieldset>
+                 <fieldset class='textbox' style="padding:2px">
+                  <input type="text" class="input-text large" name="firstname"placeholder="First Name" id="firstname">
+                   </fieldset>
+                 <fieldset class='textbox' style="padding:2px">
+                  <input type="text" class="input-text large" name="lastname"placeholder="Last Name" id="lastname">
+                   </fieldset>
+                 <fieldset class='email' style="padding:2px">
+                  <input type="text" class="input-text large" name="username"placeholder="Email" id="login_field">
+                   </fieldset>
+                     <fieldset class='textbox' style="padding:2px">
+                  <input type="password" class="input-password large submit" name="password" placeholder="Password" id="password_field">
+                   </fieldset>
+
+                     
+                  <div style="margin-left:166px; padding:2px">
+
+            <input  name="signup-button" type="submit" value="Sign Up" style="text-color: #ee2e24;border: 1px solid #fff;"/> 
+               </div>   
+</form>
+        </div>
+
+ </div>   
+
+
+
+    </div>
+
+
+
+
+
+<script language="javascript">
+var validateEmail = function(elementValue) {
+    var emailPattern = ^[_a-z0-9-]+(\.[_a-z0-9-]+)*@htc.com;
+    return emailPattern.test(elementValue);
+}
+
+
+
+$('#email').keyup(function() {
+
+    var value = $(this).val();
+    var valid = validateEmail(value);
+
+    if (!valid) {
+
+        $(this).css('color', 'red');
+
+    } else {
+
+        $(this).css('color', '#000');
+
+    }
+
+
+
+});
+
+</script>
+<script language="javascript">
+    $('.dropdown-toggle').dropdown();
+    $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+      });
+</script>
+
+ 
+<script language="Javascript" type="text/javascript"> 
+ function validateEmail(emailField){
+        console.log("I am in validateEmail");
+        var reg = ^[_a-z0-9-]+(\.[_a-z0-9-]+)*@htc.com;
+
+        
+  if(!emailField.match(reg)) {
+    alert("Invalid email address");
+    return false;
+  }
+
+  return true;
+
+
+}
+</script>
+
+
+
+</body>  
+</html>   
+           

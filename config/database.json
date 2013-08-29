@@ -1,0 +1,13 @@
+{ "development":
+  { "driver":   "mongoose"
+  , "url": "mongodb://localhost/dev-hack"
+  }
+, "test":
+  { "driver":   "mongoose"
+  , "url": "mongodb://localhost/test"
+  }
+, "production":
+  { "driver":   "mongoose"
+  , "url": "mongodb://localhost/prod"
+  }
+}

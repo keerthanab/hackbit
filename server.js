@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * Server module exports method returning new instance of app.
+ * Server module exports method which returns new instance of application server
  *
- * @param {Object} params - compound/express webserver initialization params.
- * @returns CompoundJS powered express webserver
+ * @param {Object} params - railway/express webserver initialization params.
+ * @returns RailwayJS powered express webserver
  */
 var app = module.exports = function getServerInstance(params) {
     params = params || {};
@@ -12,6 +12,9 @@ var app = module.exports = function getServerInstance(params) {
     params.root = params.root || __dirname;
     return require('compound').createServer(params);
 };
+
+
+
 
 if (!module.parent) {
     var port = process.env.PORT || 3000;

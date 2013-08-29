@@ -1,1 +1,1 @@
-### Welcome to CompoundJS ###
+## Welcome to CompoundJS
