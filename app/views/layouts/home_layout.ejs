@@ -2,7 +2,7 @@
 <html lang="en">   
 <head>   
 <meta charset="utf-8">   
-<title><%= title %></title>   
+<title>Dummy</title>   
 <meta name="description" content="Bla bla bla">  
 
 
@@ -11,108 +11,25 @@
 <script src="../twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
 <script src="../twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script> 
 
-
 <style type="text/css">
-    img.bg {
-    /* Set rules to fill background */
-    min-height: 768px;
-    min-width: 1024px;
-    max-width: 60%;
-    max-height: 100%;
-  
-  /* Set up proportionate scaling */
-  height:auto;
-  top:-2%;
-  left:14%;
-    
-  /* Set up positioning */
-  position: absolute;
-  z-index: 0;
-
-
-}
-body{
- /* background-color:#D04040; */
-}
 img.logo{
-   min-height: 150px;
-   margin-top: 70px;
-   margin-left: 60px; 
+  
+  
+   
 }
 
-#sign-up{
-   margin-top: 200px;
-}
-
-#dropdown-sign-in{
-  /*color:#ee2e24;*/
-  /*color:#7DBE32; *//*htc neon green*/
-  color:#99CC33;
-  padding-top: 50px;
-  margin-left: 180px;
-  clear: both;
-  background:#FFFFFF;
-  font: 'Helvetica Neue',Helvetica,Arial;
-  font-weight:bold;
-}
-
-/*#quote {
-  margin-bottom: 200px;
-  margin-left: 490px;
-  font: 'Helvetica Neue',Helvetica,Arial;
-  font-weight:bold;
-} */
-
-#quote {
-margin-left: 240px;
-font-family: 'Titillium Web',sans-serif;
-font-size: 18px;
-font-weight:bold;
-}
-
-#email-invalid-error{
-  color:red;
-  font-family: 'Titillium Web',sans-serif;
-  font-size: 13px;
-  font-style:italic;
-
-}
-#firstname-invalid-error{
-  color:red;
-  font-family: 'Titillium Web',sans-serif;
-  font-size: 13px;
-  font-style:italic;
-
-}
-#lastname-invalid-error{
-  color:red;
-  font-family: 'Titillium Web',sans-serif;
-  font-size: 13px;
-  font-style:italic;
-
-}
-#password-invalid-error{
-  color:red;
-  font-family: 'Titillium Web',sans-serif;
-  font-size: 13px;
-  font-style:italic;
-
-}
-
-</style>
-
+    </style>
 </head>  
 
 <body>
-  
 
-<a name="top"></a>
+	<a name="top"></a>
 <table width="100%" height="12" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#99CC33" float: "top">
   <tbody><tr>
     <td align="left" valign="top"></td>
   </tr>
 </tbody>
-</table>   
+</table> 
 <a name="top"></a>
 <table width="100%" height="12" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#000000" float: "top">
   <tbody><tr>
@@ -120,42 +37,43 @@ font-weight:bold;
   </tr>
 </tbody>
 </table>  
+
 <div class="container-fluid">
-  
-  <div class="span6 offset2">
-    <h1 ><img src="/images/my-hack.png" class="logo" align="center" style="padding-right:-15px; border-right: 1px solid #ccc;"/></h1>
+
+<div class="row-fluid"  >
+  <div class="span6">
+    <h1 ><img src="/images/my-hack.png" class="logo" align="center" style="padding-right:-10px; border-right: 1px solid #ccc;"/></h1>
 
   </div>
 
-      <div class="span8 offset1">  
-      <ul class="nav pull-right">  
-  <li class="dropdown">  
-    <a href="#"  
-          class="dropdown-toggle"  
-          data-toggle="dropdown" id="dropdown-sign-in">  
-          Sign In ?
-          <b class="caret"></b>  
-    </a>  
-    <ul class="dropdown-menu">  <span id="login-invalid-error">  </span>
-    <form style="margin: 0px" accept-charset="UTF-8" action="/login" method="get">
-      <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/>
+  <div class="span6">  
+           <div class="well sidebar-nav">
+
+            <form class="well form-inline" accept-charset="UTF-8" action="/login" method="get"> 
+              <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/>
         <input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" />
-      </div>
-      <fieldset class='textbox' style="padding:10px">         
+      </div> 
+   <fieldset class='textbox' style="padding:10px">  
+  
+   
+         
         <input style="margin-top: 8px" type="email" name="username"placeholder="Email" class="required" />
         <input style="margin-top: 8px" type="password" name="password" placeholder="Password" />
+    
         <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
         <label class="string optional" for="user_remember_me"> Remember me</label>
+
         <div style="text-align: right">
          <input name="login" type="submit" value="Log In" id="log-in-button"/> 
+    
+
         </div>                  
       </fieldset>
-    </form>
+</form>  
 
-    </ul>    
-  </li>  
-</ul>    
-         <div id="sign-up" >
+         
+</div>
+ <div id="sign-up" >
             <form style="margin: 0px" accept-charset="UTF-8" action="/signup" method="post" id="signup" onClick="" >
             <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/>
             <input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" />
@@ -185,103 +103,13 @@ font-weight:bold;
 </form>
         </div>
 
- </div>   
-
- <div id="quote"><div class="span10"> <p><i> The world is a giant puzzle that hasn't been put together yet...</i></p> </div> </div>
-
-    </div>
-
-<script language="javascript">
-    $('.dropdown-toggle').dropdown();
-    $('.dropdown-menu').find('form').click(function (e) {
-        e.stopPropagation();
-      });
-</script>
-
- 
-<script type="text/javascript" > 
-
-function validateFirstName() {
-  var firstname = document.getElementById("firstname_field").value;
-  console.log(firstname);
-    if(firstname.length<=0) {
-      console.log('firstname cannot be empty');
-      document.getElementById('firstname-invalid-error').innerHTML = "First Name doesn't look right"; 
-      return false;   
-    } else {
-       document.getElementById('firstname-invalid-error').innerHTML = "";  
-       return true;
-    }
-}
-
-function validateLastName() {
-  var lastname = document.getElementById("lastname_field").value;
-  console.log(lastname);
-    if(lastname.length<=0) {
-      console.log('lastname cannot be empty');
-      document.getElementById('lastname-invalid-error').innerHTML = "Last Name doesn't look right";     
-      return false;
-    } else {
-       document.getElementById('lastname-invalid-error').innerHTML = "";  
-       return true;
-    }
-}
-
-function validatePassword() {
-  var password = document.getElementById("password_field").value;
-  console.log(password);
-    if(password.length<=0) {
-      console.log('password cannot be empty');
-      document.getElementById('password-invalid-error').innerHTML = "Password can't be empty";   
-      return false;  
-    } else {
-       document.getElementById('password-invalid-error').innerHTML = ""; 
-       return true; 
-    }
-}
-  
-
-$('#email_field').blur(function validateEmail() {
-  var email = document.getElementById("email_field").value;
-  console.log(email);
-  var re =/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-  if (re.test(email)) {
-          if (email.indexOf('@htc.com', email.length - '@htc.com'.length) !== -1) {
-            console.log('email validation successful');
-            document.getElementById('email-invalid-error').innerHTML = ""; 
-            return true;
-         } else {
-            console.log('user did not use HTC email address');
-            document.getElementById('email-invalid-error').innerHTML = "Invalid HTC email address!";     
-            return false;
-        }
-    } else {
-        console.log('Not a valid e-mail address.');
-        document.getElementById('email-invalid-error').innerHTML = "Invalid Email address!";   
-        return false;  
-    }
-});
+           </div>
+ </div>  
+ </div> 
 
 
-$(document).ready(function() {
-  $('#signup').on("submit", function(error) {
-   if(!error) {
-    console.log("stop the form from getting submitted");
-     error.preventDefault();
-   }
-  });
-});
-
-$('#signup').submit(function() {
-  validateFirstName();
-  validateLastName();
-  validatePassword();
-});
-
-</script>
-
+</div>
 
 
 </body>  
-</html>   
-           
+</html>  

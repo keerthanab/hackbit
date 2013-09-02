@@ -31,7 +31,8 @@ var UserSchema = new mongoose.Schema({
     firstname: {type:String, required:true, trim: true},
     lastname: {type:String, required:true, trim: true},
     username:{ type: String, required: true, index: { unique: true }, trim: true},
-    password: { type: String, required: true, trim: true}    
+    password: { type: String, required: true, trim: true},
+    projects: [ProjectSchema]
 
 });
     
@@ -71,6 +72,29 @@ UserSchema.methods.comparePassword = function(hashedPassword, callback) {
     User.modelName = 'User';     // expose model name for view helpers (resource-based helpers like formFor)
     compound.models.User = User; // register model in compound.models registry
 
+
+var ProjectSchema = new mongoose.Schema({
+
+        projectname: String,
+        teamname: String,
+        projdesc: String,
+        teammember1: String,
+        teammember2: String
+
+});
+
+
+var TeamMember = new mongoose.Schema({
+
+        member1: String,
+        member2: String
+
+});
+
+
+    var Project = mongoose.model('Project', ProjectSchema);
+    Project.modelName = 'Project';     // expose model name for view helpers (resource-based helpers like formFor)
+    compound.models.Project = Project; // register model in compound.models registry
 
 
 };

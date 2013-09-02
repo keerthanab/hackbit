@@ -21,6 +21,7 @@ action('signupSuccess', function () {
     }
     else {
     	console.log("All is fine ya");
+        req.session.user=user;
     	//redirect to login in this case and say hi to the new user :)
     	redirect('/overview');
     	//render('signup_success.ejs', {user: req.username, title: 'Hack Pub'}  );       

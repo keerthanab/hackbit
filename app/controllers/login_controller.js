@@ -19,6 +19,7 @@ user.retrieveUser(req,res,retrieveUserCallback);
     	else {
     		if(result) {
     			console.log("All is fine from login controller");
+                req.session.user=user;
     			//redirect to login in this case and say hi to the new user :)
                 //console.log("rightnow:" req.cookies.user);
     			redirect('/overview'); 	
