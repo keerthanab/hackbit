@@ -77,12 +77,12 @@ img.logo{
 
 
 #user-avatar {
-border: 2px solid rgba(0,0,0,0.3);
+border: 2px solid rgba(0,0,0,0.2);
 margin: 0 auto 20px;
 position: relative;
--moz-border-radius: 80px;
--webkit-border-radius: 80px;
-border-radius: 80px;
+-moz-border-radius: 60px;
+-webkit-border-radius: 60px;
+border-radius: 60px;
 width: 120px;
 height: 120px;
 margin-top: -110px;
@@ -132,18 +132,23 @@ margin-left: -100px;
             </div>
           </div>
 <div class="span1 pull-right" > 
-          <div id="user-avatar">
 
-            <ul class="nav pull-right">
-
-            <ul class="dropdown-menu">
-                            <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-                            <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
-                        </ul>
-                      </ul>
-        </div>
+  <ul class="dropdown">  
+    <a href="#"  
+          class="dropdown-toggle"  
+          data-toggle="dropdown" id="dropdown-sign-in">  
+          Howdy, Keerthana! 
+          <b class="caret"></b>  
+    </a>  
+    <ul class="nav pull-right">
+            <ul class="dropdown-menu" data-no-collapse="true">
+                <li><a href="/user-profile"><i class="icon-cog"></i> Edit Profile</a></li>
+                <li><a href="/support"><i class="icon-envelope"></i> Support </a></li>
+                <li class="divider"></li>
+                <li><a href="/logout"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+            </ul>  
+  </ul>  
 
 </div>
         

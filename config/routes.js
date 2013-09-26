@@ -29,4 +29,6 @@ exports.routes = function (map) {
 
     map.get('/brewery', 'sidebar#breweryPage');
 
+    map.get('/logout', 'logout#logoutPage');
+
 };

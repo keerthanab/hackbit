@@ -3,6 +3,7 @@ action('loginPage', function () {
 var user = new User(req.query);
 console.log("This is from login controller");
 
+
 var gravatar = require('gravatar');
 var gravatarURL = gravatar.url('baskaran@usc.com', {s: '200', r: 'pg', d: '404'});
 
@@ -20,7 +21,9 @@ user.retrieveUser(req,res,retrieveUserCallback);
     		if(result) {
     			console.log("All is fine from login controller");
     			//redirect to login in this case and say hi to the new user :)
-                //console.log("rightnow:" req.cookies.user);
+                req.session.username = req.query.username;
+                console.log("rightnow:"+ req.session.username);
+                console.log("secret:"+ req.session.secret);
     			redirect('/overview'); 	
     		} else {
     			//render(req.query.path.resolve(), {loginError:'Sorry, you\'re not logged in correctly.'}); 	

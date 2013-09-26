@@ -16,8 +16,8 @@ compound.on('post-init', function () {
         app.set('cssDirectory', '/stylesheets/');
         app.set('cssEngine', 'stylus');
         app.use(express.bodyParser());
-        app.use(express.cookieParser('secret'));
-        app.use(express.session({secret: 'secret'}));
+        app.use(express.cookieParser('secret12345'));
+        app.use(express.session({secret: 'secret12345'}));
         app.use(express.methodOverride());
         
         app.use(app.router);
